@@ -11,3 +11,11 @@ dotnet user-secrets set "ConnectionStrings:ConnectionString" "Data Source=localh
 
 dotnet ef database update
 ```
+
+## Vulnerabilities
+
+Enable Dependabot security and version updates
+
+## Code Scanning
+
+Enable Code Scanning

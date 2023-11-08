@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B447CC0-EA0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlInjection", "src\SqlInjection\SqlInjection.csproj", "{65CBCA10-650F-49B4-AC8B-BEEBCB36884E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeScanning", "src\CodeScanning\CodeScanning.csproj", "{6A839E93-8F09-4B77-B24D-2D1B12986A49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{65CBCA10-650F-49B4-AC8B-BEEBCB36884E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65CBCA10-650F-49B4-AC8B-BEEBCB36884E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CBCA10-650F-49B4-AC8B-BEEBCB36884E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A839E93-8F09-4B77-B24D-2D1B12986A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A839E93-8F09-4B77-B24D-2D1B12986A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A839E93-8F09-4B77-B24D-2D1B12986A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A839E93-8F09-4B77-B24D-2D1B12986A49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{65CBCA10-650F-49B4-AC8B-BEEBCB36884E} = {3B447CC0-EA0D-4B03-A43E-0CA4DD8AA99C}
+		{6A839E93-8F09-4B77-B24D-2D1B12986A49} = {3B447CC0-EA0D-4B03-A43E-0CA4DD8AA99C}
 	EndGlobalSection
 EndGlobal
