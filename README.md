@@ -19,3 +19,7 @@ Enable Dependabot security and version updates
 ## Code Scanning
 
 Enable Code Scanning
+
+## Secrets
+
+Enable Push Protection
