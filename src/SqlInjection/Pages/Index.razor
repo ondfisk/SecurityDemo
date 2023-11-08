@@ -1,0 +1,53 @@
+﻿@page "/"
+@using SqlInjection.Data
+@inject NavigationManager NavigationManager
+@inject AppDbContext AppDbContext
+
+<PageTitle>Find a movie</PageTitle>
+
+<h1>Find a movie</h1>
+
+<form method="get" class="form-row">
+    <label for="query" class="form-label">Movie</label>
+    <input type="text" class="form-control" bind="@Query" name="query" id="query" value="@Query" placeholder="Enter a partial movie title" />
+    <button type="submit" class="btn btn-primary">Find</button>
+</form>
+
+@if (movies is not null)
+{
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in movies)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string Query { get; set; } = string.Empty;
+
+    private IEnumerable<Movie>? movies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(Query))
+        {
+            movies = await AppDbContext.Movies.FromSqlRaw(
+            $"SELECT * FROM Movies WHERE Title LIKE '%{Query}%'"
+            ).ToListAsync();
+        }
+    }
+}
